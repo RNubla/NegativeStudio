@@ -2,7 +2,7 @@
 name = "negative_studio"
 default-run = "negative_studio_bin"
 version = "0.1.0"
-authors = ["Robert Nubla]
+authors = ["Robert Nubla"]
 edition = "2021"
 rust-version = "1.60"
 
@@ -19,7 +19,9 @@ crate-type = ["cdylib", "rlib"]
 [dependencies]
 egui = "0.18.0"
 eframe = { version = "0.18.0", features = ["persistence"] }
-serde = { version = "1", features = ["derive"] } # You only need this if you want app persistence
+serde = { version = "1", features = [
+    "derive",
+] } # You only need this if you want app persistence
 
 # native:
 [target.'cfg(not(target_arch = "wasm32"))'.dependencies]

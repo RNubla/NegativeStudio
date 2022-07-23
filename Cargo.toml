@@ -18,6 +18,14 @@ crate-type = ["cdylib", "rlib"]
 
 [dependencies]
 egui = "0.18.0"
+egui_extras = { version = "*", features = ["image"] }
+ehttp = "0.2.0"
+rfd = "0.9.1"
+image = { version = "0.24.3", default-features = false, features = [
+    "jpeg",
+    "png",
+] }
+poll-promise = "0.1.0"
 eframe = { version = "0.18.0", features = ["persistence"] }
 serde = { version = "1", features = [
     "derive",
